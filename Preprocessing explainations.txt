@@ -1,0 +1,43 @@
+Group 02 - Idan Levy and Amit Geva 
+
+Ireland News Headlines - Data Preprocessing & Visualization
+
+This repository contains the first part of the final project for a university NLP + RL deep learning course. The initial phase is dedicated to preprocessing and visualizing the dataset 'ireland-news-headlines.csv', which contains 1.61 million news headlines from the Irish Times covering a quarter of a century. The goal of the overall project is to build a deep learning model that predicts the headline category given the headline text.
+
+Dataset:
+The dataset, retrieved from Kaggle, includes three fields:
+
+1.publish_date: The date when the article was published in yyyyMMdd format.
+2.headline_category: Category of the headline, Ascii, dot-delimited, and lowercase values.
+3.headline_text: Title of the article in English in UTF-8 charset.
+
+An example row from the dataset:
+
+publish_date	headline_category	headline_text
+19960102	news	UUP sees possibility of voting Major out
+
+Preprocessing:
+Preprocessing involved cleaning, organizing, and simplifying the dataset to make it suitable for training the model. The steps include:
+
+1.Conversion of all letters to lowercase.
+2.Deletion of duplicated rows.
+3.Conversion of the publish_date column into three separate columns: day, month, and year.
+4.Removal of rows with null values.
+5.Reduction and organization of headline categories.
+6.Counting unique words and their frequencies in the dataset.
+7.Analyzing the distribution of headline lengths.
+8.Text preprocessing steps like tokenizing words, removing punctuation, stop words, and applying lemmatization.
+
+Category Balancing:
+An important preprocessing step was to balance the dataset as the initial category distribution was skewed. The categories were split into two groups, one was oversampled, and the other was under-sampled, to make the distribution balanced.
+
+Visualization:
+The notebook includes multiple visualizations that provide insights into the data, such as:
+
+1.Distribution of unique words in the dataset.
+2.Distribution of headline lengths.
+3.Distribution of categories in the dataset before and after balancing.
+4.Pareto Chart of Words Frequency by Proportion
+
+Future Work:
+The subsequent phase of this project will involve choosing and training a suitable pre-trained model, compressing the trained model using three different methods, and selecting the optimal compressed model for deployment.
